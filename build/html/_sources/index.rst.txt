@@ -29,18 +29,57 @@ gain hotspots, Forest change, forest fires and the Mediterranean Desertification
 .. |Logo| image:: Logo.png
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+   :maxdepth: 3
+   :caption: About
+
+   /Introduction/general_information
+   /Introduction/data
+   /Introduction/Layers
+   /Introduction/faq
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Background:
+   :maxdepth: 4
+   :caption: Background
 
    Background/LD_indicators
+   Background/SDG_indicators
+   Background/vegetationloss
+   Background/Forest_change
 
-Indices and tables
-===================
+.. toctree::
+   :maxdepth: 3
+   :caption: Web Service Guide
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   Service/Service_Guide
+   Service/Calculate_SDG
+   Service/Calculate_vegetationloss
+   Service/Calculate_Forestloss
+   Service/Calculate_Medalus
+   Service/Download_results
+   Service/Download_data
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Qgis Plugin Guide
+
+   Qgis_Plugin/plugin_development
+   Qgis_Plugin/before_installing
+   Qgis_Plugin/installing
+   Qgis_Plugin/Registration
+   Qgis_Plugin/Calculate_sdg15
+   Qgis_Plugin/Calculate_vegetation
+   Qgis_Plugin/Calculate_forest
+   Qgis_Plugin/Calculate_medalus
+   Qgis_Plugin/gee_tasks
+   Qgis_Plugin/load_data
+   Qgis_Plugin/Download_data
+   Qgis_Plugin/visualization
+
+.. toctree::
+   :maxdepth: 3
+   :caption: QGIS Plugin Training Material
+
+   Qgis_Plugin/sdg_15_training
+   Qgis_Plugin/vegetation_degradation_training
+
+

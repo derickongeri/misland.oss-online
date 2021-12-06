@@ -198,8 +198,15 @@ areas. The indicator is computed as follows:
    presented in the table below. Those coefficients represent the proportional 
    in C stocks after 20 years of land cover change.
 
-.. image:: ../_static/Images/understanding_indicators15/soc_coeff.PNG
-   :align: center
+.. figure:: ../_static/Images/understanding_indicators15/soc_coeff.PNG
+    :width: 780
+    :align: center
+    :height: 250
+    :alt: soil organic carbon coefficients
+    :figclass: align-center
+
+    soil organic carbon coefficients
+
 
 Changes in SOC are better studied for land cover transitions involving 
 agriculture, and for that reason there is a different set of coefficients for 
@@ -207,13 +214,19 @@ each of the main global climatic regions: Temperate Dry (f = 0.80), Temperate
 Moist (f = 0.69), Tropical Dry (f = 0.58), Tropical Moist (f = 0.48), and 
 Tropical Montane (f = 0.64).
    
-4. Compute relative different in SOC between the baseline and the target 
+1. Compute relative different in SOC between the baseline and the target 
    period, areas which experienced a loss in SOC of 10% of more during the 
    reporting period will be considered potentially degraded, and areas 
    experiencing a gain of 10% or more as potentially improved.
-   
-.. image:: ../_static/Images/understanding_indicators15/soc.PNG
-   :align: center
+
+.. figure:: ../_static/Images/understanding_indicators15/soc.PNG
+    :width: 780
+    :align: center
+    :height: 300
+    :alt: soil organic carbon 
+    :figclass: align-center
+
+    Summary methodolgy for Soil Organic Carbon
 
 Combining Productivity Indicators
 ---------------------------------
@@ -224,8 +237,14 @@ LDMS also produces a 5-class one which takes advantage of the
 information provided by State to inform the type of degradation occurring in 
 the area.
 
-.. image:: ../_static/Images/understanding_indicators15/lp_aggregation.PNG
-   :align: center
+.. figure:: ../_static/Images/understanding_indicators15/lp_aggregation.PNG
+    :width: 550
+    :align: center
+    :height: 300
+    :alt: combining poductivity sub-indicators
+    :figclass: align-center
+
+    Aggregating the productivity sub-indicators
 
    
 Vegetation Loss/Gain hotspots
@@ -235,10 +254,10 @@ Land degradation hotsports (LDH) are produced via the analysis of time-series ve
 
 Vegetation loss/gain hotspots will be calculated based on time series observation of selected suit of vegetation indices depending on the climatic zones and terrain morphology of the North African countries. The selected indices derived from Landsat data are as listed below:
 
-    -NDVI for humid zones, sub-humid and semi-arid zones
-    -MSAVI2 for arid and stepic zones
-    -SAVI for desert areas
-    
+-NDVI for humid zones, sub-humid and semi-arid zones
+-MSAVI2 for arid and stepic zones
+-SAVI for desert areas
+
 Forest Change
 =============
 
@@ -246,7 +265,7 @@ Forest Gain/Loss
 ----------------
 The quantification of the forest gain/loss hotspots will be based on pre-existing high-resolution global maps derived from Hansen Global Forest change dataset that can be accessed using `Google Earth Engine API`_. 
 
-    .. _Google Earth Engine API: https://earthenginepartners.appspot.com/science-2013-global-forest
+.. _Google Earth Engine API: https://earthenginepartners.appspot.com/science-2013-global-forest
 
 The maps are produced from time-series analysis of Landsat images characterizing forest extent and change over time.
 

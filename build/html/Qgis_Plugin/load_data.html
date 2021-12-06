@@ -1,0 +1,365 @@
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="title" content="MISLAND">
+        <meta name="version" content="">
+        <meta name="copyright" content="2021, Derick Ongeri">
+        
+        <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+        
+        <!-- Favicon Icon -->
+        
+        <link rel="shortcut icon" href="../_static/Logo.svg"/>
+        
+
+        
+        <title>Load Custom Data</title>
+        
+
+        <script type="text/javascript" src="../_static/js/jquery.min.js"></script>
+       
+        
+    <link rel="stylesheet" href="../_static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../_static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../_static/css/hover-min.css">
+    <!--<link rel="stylesheet" href="../_static/octicons/lib/octicons.css">-->
+    <!--<link rel="stylesheet" href="../_static/primer-markdown/lib/user-content.min.css">-->
+    <link rel="stylesheet" href="../_static/css/syntax.css" type="text/css" />
+
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    
+      
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      
+    
+      
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      
+    
+
+    
+
+    
+
+    <script type="text/javascript" src="../_static/js/bootstrap.min.js"></script>
+    
+    
+
+
+        
+        
+        
+        
+        
+        <!-- Genindex Linktag -->
+        <link rel="index" title="Index" href="../genindex.html" />
+        
+        
+        <!-- Search Linktag -->
+        <link rel="search" title="Search" href="../search.html" />
+        
+        
+        
+        <!-- Next Linktag -->
+        <link rel="next" title="Download raw data" href="Download_data.html" />
+        
+        
+        <!-- Previous Linktag -->
+        <link rel="prev" title="View and download results" href="gee_tasks.html" />
+        
+        
+        
+        
+    </head>
+    <body>
+        
+        <header class="site-header">
+            <div class="container">
+                <a id="site-header-brand" href="/" title="MISLAND">
+                    <i class="fa fa-misland-logo.ico" aria-hidden="true"></i> MISLAND
+                </a>
+                <nav class="site-header-nav" role="navigation">
+                
+                
+                    <a href="http://194.163.176.189/#/" class=" site-header-nav-item hvr-underline-from-center"
+               target="_self"
+               title="Home">
+                        Home
+                    </a>
+                
+                    <a href="http://194.163.176.189/#/dashboard" class=" site-header-nav-item hvr-underline-from-center"
+               target="_self"
+               title="Dashboard">
+                        Dashboard
+                    </a>
+                
+                    <a href="../index.html" class=" site-header-nav-item hvr-underline-from-center"
+               target="_self"
+               title="MISLAND">
+                        Documentation
+                    </a>
+                
+                </nav>
+            </div>
+        </header>
+        
+        <section class="jumbotron geopattern" data-pattern-id="Qgis_Plugin/load_data">
+            <div class="container">
+                <div id="jumbotron-meta-info">
+                    <h1>Load Custom Data</h1>
+                    <span class="meta-info">
+                        
+                        
+                        
+                        
+                        
+                        
+                    </span>
+                </div>
+            </div>
+        </section>
+        
+        <article class="post container" itemscope itemtype="http://schema.org/BlogPosting">
+            <div class="row">
+                <div class="col-md-8 markdown-body">
+                    
+  <section id="load-custom-data">
+<h1>Load Custom Data<a class="headerlink" href="#load-custom-data" title="Permalink to this headline">¶</a></h1>
+<div style="border: 1px solid; margin-bottom: 2em; box-shadow: 2px 3px #888888; overflow: hidden; max-width: 100%; height: auto;">
+    <video style="width: 100%; height: 100%;" controls>
+        <source src="https://res.cloudinary.com/acemobile/video/upload/v1613917179/MISLAND/load_custom_data.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div><img alt="_static/common/plugin_toolbar_loaddata.png" class="align-center" src="_static/common/plugin_toolbar_loaddata.png" />
+<p>The “Load data” function allows the user to load data into QGIS and
+MISLAND for analysis.</p>
+<p>There are two options, to load results of MISLAND analysis or to load
+custom datasets which will be used to compute the indicators.</p>
+<img alt="_static/documentation/load_data/custom_load.png" class="align-center" src="_static/documentation/load_data/custom_load.png" />
+<section id="load-a-dataset-produced-by-misland">
+<h2>Load a dataset produced by MISLAND<a class="headerlink" href="#load-a-dataset-produced-by-misland" title="Permalink to this headline">¶</a></h2>
+<p>This option lets you load already downloaded results from MISLAND. eg Productivity, Land Cover, Soil Organic Carbon,
+Forest Fires, Soil Quality Index, Vegetation Quality Index, Climate Quality Index, Management Quality Index, etc.</p>
+<section id="productivity">
+<h3>Productivity<a class="headerlink" href="#productivity" title="Permalink to this headline">¶</a></h3>
+<p>Use this function to load into the QGIS map pre-computed productivity indicators which had been
+processed to identify land degradation.</p>
+<p>Navigate to the folder where you stored the downloaded file and select it. The downloaded file is an 8 band raster,
+with each band representing the three subindicators (trajectory, performance and state) plus other information which may
+help you interpret the trends identified. The layers to be loaded into the QGIS maps are the ones highlighted in gray. By default: trajectory
+(degradation and slope), performance and state. If you want to load the other layers, simply select them and click OK.</p>
+<img alt="_static/documentation/load_data/loaddata_trendsearth_productivity.png" class="align-center" src="_static/documentation/load_data/loaddata_trendsearth_productivity.png" />
+<p>The layers will be loaded in the QGIS map with its corresponding symbology.</p>
+<img alt="_static/documentation/load_data/loaddata_trendsearth_productivity_loaded.png" class="align-center" src="_static/documentation/load_data/loaddata_trendsearth_productivity_loaded.png" />
+</section>
+<section id="land-cover">
+<h3>Land cover<a class="headerlink" href="#land-cover" title="Permalink to this headline">¶</a></h3>
+<p>This option lets you load pre-computed land cover indicators which had been
+processed to identify land degradation.</p>
+<p>Navigate to the folder where you stored the downloaded file and select it. The downloaded file is a multi band raster. The number
+of bands will depend on the period of analysis selected and the data source used. If the default ESA CCI land cover was used, for example,
+annual land cover maps will be downloaded.</p>
+<p>The bands in the stack represent: initial and final land cover (annual if available) both in the original classification scheme and using
+the UNCCD 7 class land cover table, land cover transitions and land cover degradation as
+identified by this subindicator. If you want to load the other layers not selected by default, simply select them and click OK.</p>
+<img alt="_static/documentation/load_data/loaddata_trendsearth_landcover.png" class="align-center" src="_static/documentation/load_data/loaddata_trendsearth_landcover.png" />
+<p>The layers will be loaded in the QGIS map with its corresponding symbology.</p>
+<img alt="_static/documentation/load_data/loaddata_trendsearth_landcover_loaded.png" class="align-center" src="_static/documentation/load_data/loaddata_trendsearth_landcover_loaded.png" />
+</section>
+<section id="soil-organic-carbon">
+<h3>Soil organic carbon<a class="headerlink" href="#soil-organic-carbon" title="Permalink to this headline">¶</a></h3>
+<p>This option lets you load pre-computed soil organic carbon indicators which had been
+processed to identify land degradation.</p>
+<p>Navigate to the folder where you stored the downloaded file and select it. The downloaded file is a multi band raster. The number
+of bands will depend on the period of analysis selected and the data source used. If the default ESA CCI land cover was used, for example,
+annual soil organic carbon maps will be downloaded.</p>
+<p>The bands in the stack represent: initial and final soil organic carbon stocks (annual soc if annual land data is available),
+initial and final land cover maps using the UNCCD 7 class land cover classification,and degradation as identified by this
+subindicator. The units of the degradation layer are “% change”, if changes are larger than 10% for the period, they will be
+considered as improvement or degradation depending on the sign of the change. If you want to load the other layers not
+selected by default, simply select them and click OK.</p>
+<img alt="_static/documentation/load_data/loaddata_trendsearth_soc.png" class="align-center" src="_static/documentation/load_data/loaddata_trendsearth_soc.png" />
+<p>The layers will be loaded in the QGIS map with its corresponding symbology.</p>
+<img alt="_static/documentation/load_data/loaddata_trendsearth_soc_loaded.png" class="align-center" src="_static/documentation/load_data/loaddata_trendsearth_soc_loaded.png" />
+</section>
+<section id="sdg-15-3-1-indicator">
+<h3>SDG 15.3.1 indicator<a class="headerlink" href="#sdg-15-3-1-indicator" title="Permalink to this headline">¶</a></h3>
+<p>This option lets you load pre-computed productivity subindicator (the integration of trajectory,
+performance and state) as well as the final SDG 15.3.1 (the integration of productivity,
+land cover and soil organic carbon)</p>
+<p>Navigate to the folder where you stored the downloaded file and select it. The downloaded file is an 2 band raster, the first one
+containing information on the SDG and the second on the 5 classes productivity subindicator.</p>
+<img alt="_static/documentation/load_data/loaddata_trendsearth_sdg.png" class="align-center" src="_static/documentation/load_data/loaddata_trendsearth_sdg.png" />
+<p>The layers will be loaded in the QGIS map with its corresponding symbology.</p>
+<img alt="_static/documentation/load_data/loaddata_trendsearth_sdg_loaded.png" class="align-center" src="_static/documentation/load_data/loaddata_trendsearth_sdg_loaded.png" />
+</section>
+</section>
+<section id="load-a-custom-input-dataset">
+<h2>Load a custom input dataset<a class="headerlink" href="#load-a-custom-input-dataset" title="Permalink to this headline">¶</a></h2>
+<section id="id1">
+<h3>Productivity<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Use this option to load productivity datasets which have already been generated outside of MISLAND.</p>
+<p>Productivity classes in the input data must be coded as follows:</p>
+<p>1: Declining
+2: Early signs of decline
+3: Stable but stressed
+4: Stable
+5: Increasing
+0 or -32768: No data</p>
+<img alt="_static/documentation/load_data/loaddata_landproductivity.png" class="align-center" src="_static/documentation/load_data/loaddata_landproductivity.png" />
+</section>
+<section id="id2">
+<h3>Land cover<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Use this option to load land cover datasets which will then be used for land
+cover change analysis and/or soil organic carbon change analysis.</p>
+<img alt="_static/documentation/load_data/loaddata_landcover.png" class="align-center" src="_static/documentation/load_data/loaddata_landcover.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you’ll be using the <a class="reference external" href="https://www.eea.europa.eu/publications/COR0-landcover">CORINE land cover data</a> , you can use
+<a class="reference external" href="https://s3.amazonaws.com/trends.earth/sharing/Corine_Land_Cover_to_UNCCD_TrendsEarth_Definition.json">this definition file</a>
+to pre-load a suggested aggregation of the land cover classes in Corine to convert them to the 7 UNCCD land cover classes.</p>
+</div>
+</section>
+<section id="id3">
+<h3>Soil organic carbon<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Processing of custom soil organic carbon data can be handled using this
+tool.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This tool assumes that the units of the raster layer to be imported
+are <strong>Metrics Tons of organic carbon per hectare</strong>. If your layer is in
+different units, please make the necessary conversions before using it in
+MISLAND.</p>
+</div>
+</section>
+</section>
+</section>
+
+
+                    <!-- Comments -->
+                    
+                </div>
+                <div class="col-md-4 toc">
+                    <h3>Table Of Contents</h3>
+                    <div id="toc">
+                        
+                        <p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/general_information.html">General Infortmation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/data.html">Data sources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Layers.html">Dataset coding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/faq.html">Frequently asked questions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Background</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Background/LD_indicators.html">Land Degradation Indicators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Background/LD_indicators.html#sdg15-3-1-indicator">SDG15.3.1 Indicator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Background/LD_indicators.html#vegetation-loss-gain-hotspots">Vegetation Loss/Gain hotspots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Background/LD_indicators.html#forest-change">Forest Change</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Web Service Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Service/Service_Guide.html">Serivice Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Service/Calculate_SDG.html">SDG 15.3.1 indicator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Service/Calculate_vegetationloss.html">Calculate Vegetation Loss/Gain indicators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Service/Calculate_Forestloss.html">Calculate Forest Change</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Service/Calculate_Medalus.html">Calculating Sensitivity to Desertification (MEDALUS)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Service/Download_results.html">Exporting Outputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Service/Download_data.html">Download data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Qgis Plugin Guide</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="plugin_development.html">Plugin Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="before_installing.html">Before installing the toolbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installing.html">Installing the toolbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Registration.html">Registration and settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Calculate_sdg15.html">Calculate SDG 15.3.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Calculate_vegetation.html">Calculate Vegetation Degradation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Calculate_forest.html">Calculate Forest Degradation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Calculate_medalus.html">Calculate Desertification (MEDALUS)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gee_tasks.html">View and download results</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Load Custom Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#load-a-dataset-produced-by-misland">Load a dataset produced by MISLAND</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#load-a-custom-input-dataset">Load a custom input dataset</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Download_data.html">Download raw data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualization.html">Visualization tools</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">QGIS Plugin Training Material</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sdg_15_training.html">Calculate SDG 15.3.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vegetation_degradation_training.html">Calculate Vegetation/Forest Degradation</a></li>
+</ul>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+        
+        <footer class="container">
+            <div class="site-footer">
+                <div class="copyright pull-left">
+                    
+                    &#169; Copyright 2021, Derick Ongeri.
+                    
+                </div>
+                <div class="source_code">
+                    
+                    <a href="javascript:window.scrollTo(20,20)">
+                        <i class="fa fa-arrow-up" title="To The Top" aria-hidden="true"></i>
+                    </a>
+                    
+                </div>
+                
+                <div class="sphinx pull-right">
+                    
+                    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.0
+                    
+                </div>
+                
+            </div>
+            
+        </footer>
+        
+        
+        
+     
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script> 
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script> 
+    <script src="../_static/jquery.js"></script> 
+    <script src="../_static/underscore.js"></script> 
+    <script src="../_static/doctools.js"></script> 
+     
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+    <script type="text/javascript" src="../_static/js/script.js"></script>
+    <script type="text/javascript" src="../_static/js/underscore-min.js"></script>
+    <script type="text/javascript" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+
+    
+
+        
+    </body>
+</html>
