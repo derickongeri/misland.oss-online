@@ -1,153 +1,238 @@
 
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
+
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="title" content="MISLAND">
-        <meta name="version" content="">
-        <meta name="copyright" content="2021, Derick Ongeri">
-        
-        <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-        
-        <!-- Favicon Icon -->
-        
-        <link rel="shortcut icon" href="../_static/Logo.svg"/>
-        
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="lang:clipboard.copy" content="Copy to clipboard">
+  <meta name="lang:clipboard.copied" content="Copied to clipboard">
+  <meta name="lang:search.language" content="en">
+  <meta name="lang:search.pipeline.stopwords" content="True">
+  <meta name="lang:search.pipeline.trimmer" content="True">
+  <meta name="lang:search.result.none" content="No matching documents">
+  <meta name="lang:search.result.one" content="1 matching document">
+  <meta name="lang:search.result.other" content="# matching documents">
+  <meta name="lang:search.tokenizer" content="[\s\-]+">
 
-        
-        <title>Calculate SDG 15.3.1</title>
-        
+  
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto:300,400,400i,700&display=fallback" rel="stylesheet">
 
-        <script type="text/javascript" src="../_static/js/jquery.min.js"></script>
-       
-        
-    <link rel="stylesheet" href="../_static/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../_static/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../_static/css/hover-min.css">
-    <!--<link rel="stylesheet" href="../_static/octicons/lib/octicons.css">-->
-    <!--<link rel="stylesheet" href="../_static/primer-markdown/lib/user-content.min.css">-->
-    <link rel="stylesheet" href="../_static/css/syntax.css" type="text/css" />
+    <style>
+      body,
+      input {
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif
+      }
 
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
-    
+      code,
+      kbd,
+      pre {
+        font-family: "Roboto Mono", "Courier New", Courier, monospace
+      }
+    </style>
+  
+
+  <link rel="stylesheet" href="../_static/stylesheets/application.css"/>
+  <link rel="stylesheet" href="../_static/stylesheets/application-palette.css"/>
+  <link rel="stylesheet" href="../_static/stylesheets/application-fixes.css"/>
+  
+  <link rel="stylesheet" href="../_static/fonts/material-icons.css"/>
+  
+  <meta name="theme-color" content="#3f51b5">
+  <script src="../_static/javascripts/modernizr.js"></script>
+  
+  
+  
+    <title>Calculate SDG 15.3.1 &#8212; MISLAND 0.0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/material.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/Logo.svg"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Calculate Vegetation Degradation" href="Calculate_vegetation.html" />
+    <link rel="prev" title="Registration and settings" href="Registration.html" />
+  
+   
+
+  </head>
+  <body dir=ltr
+        data-md-color-primary=blue-grey data-md-color-accent=blue>
+  
+  <svg class="md-svg">
+    <defs data-children-count="0">
       
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
       
-    
+    </defs>
+  </svg>
+  
+  <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer">
+  <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search">
+  <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+  <a href="#Qgis_Plugin/Calculate_sdg15" tabindex="1" class="md-skip"> Skip to content </a>
+  <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex navheader">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../index.html" title="MISLAND 0.0.1 documentation"
+           class="md-header-nav__button md-logo">
+          
+              <img src="../_static/Logo.png" height="26"
+                   alt="MISLAND 0.0.1 documentation logo">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          <span class="md-header-nav__topic">MISLAND 0.0.1 documentation</span>
+          <span class="md-header-nav__topic"> Calculate SDG 15.3.1 </span>
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+        
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" action="../search.html" method="get" name="search">
+      <input type="text" class="md-search__input" name="q" placeholder="Search"
+             autocapitalize="off" autocomplete="off" spellcheck="false"
+             data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
       
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       
-    
+  
+  <script src="../_static/javascripts/version_dropdown.js"></script>
+  <script>
+    var json_loc = "../"versions.json"",
+        target_loc = "../../",
+        text = "Versions";
+    $( document ).ready( add_version_dropdown(json_loc, target_loc, text));
+  </script>
+  
 
-    
+    </div>
+  </nav>
+</header>
 
+  
+  <div class="md-container">
     
-
-    <script type="text/javascript" src="../_static/js/bootstrap.min.js"></script>
     
     
+  <nav class="md-tabs" data-md-component="tabs">
+    <div class="md-tabs__inner md-grid">
+      <ul class="md-tabs__list">
+          <li class="md-tabs__item"><a href="../index.html" class="md-tabs__link">MISLAND 0.0.1 documentation</a></li>
+            
+            <li class="md-tabs__item"><a href="http://194.163.176.189/#/" class="md-tabs__link">Home</a></li>
+            
+            <li class="md-tabs__item"><a href="http://194.163.176.189/#/dashboard" class="md-tabs__link">Dashboard</a></li>
+      </ul>
+    </div>
+  </nav>
+    <main class="md-main">
+      <div class="md-main__inner md-grid" data-md-component="container">
+        
+          <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../index.html" title="MISLAND 0.0.1 documentation" class="md-nav__button md-logo">
+      
+        <img src="../_static/Logo.png" alt=" logo" width="48" height="48">
+      
+    </a>
+    <a href="../index.html"
+       title="MISLAND 0.0.1 documentation">MISLAND 0.0.1 documentation</a>
+  </label>
+  
 
-
-        
-        
-        
-        
-        
-        <!-- Genindex Linktag -->
-        <link rel="index" title="Index" href="../genindex.html" />
-        
-        
-        <!-- Search Linktag -->
-        <link rel="search" title="Search" href="../search.html" />
-        
-        
-        
-        <!-- Next Linktag -->
-        <link rel="next" title="Calculate Vegetation Degradation" href="Calculate_vegetation.html" />
-        
-        
-        <!-- Previous Linktag -->
-        <link rel="prev" title="Registration and settings" href="Registration.html" />
-        
-        
-        
-        
-    </head>
-    <body>
-        
-        <header class="site-header">
-            <div class="container">
-                <a id="site-header-brand" href="/" title="MISLAND">
-                    <i class="fa fa-misland-logo.ico" aria-hidden="true"></i> MISLAND
-                </a>
-                <nav class="site-header-nav" role="navigation">
-                
-                
-                    <a href="http://194.163.176.189/#/" class=" site-header-nav-item hvr-underline-from-center"
-               target="_self"
-               title="Home">
-                        Home
-                    </a>
-                
-                    <a href="http://194.163.176.189/#/dashboard" class=" site-header-nav-item hvr-underline-from-center"
-               target="_self"
-               title="Dashboard">
-                        Dashboard
-                    </a>
-                
-                    <a href="../index.html" class=" site-header-nav-item hvr-underline-from-center"
-               target="_self"
-               title="MISLAND">
-                        Documentation
-                    </a>
-                
-                </nav>
+</nav>
+              </div>
             </div>
-        </header>
-        
-        <section class="jumbotron geopattern" data-pattern-id="Qgis_Plugin/Calculate_sdg15">
-            <div class="container">
-                <div id="jumbotron-meta-info">
-                    <h1>Calculate SDG 15.3.1</h1>
-                    <span class="meta-info">
-                        
-                        
-                        
-                        
-                        
-                        
-                    </span>
-                </div>
+          </div>
+          <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                
+<nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">Contents</label>
+  <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#qgis-plugin-calculate-sdg15--page-root" class="md-nav__link">Calculate SDG 15.3.1</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#calculate-indicators-with-simplified-tool" class="md-nav__link">Calculate indicators with simplified tool</a>
+        </li>
+        <li class="md-nav__item"><a href="#calculate-productivity" class="md-nav__link">Calculate productivity</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#productivity-trajectory" class="md-nav__link">Productivity Trajectory</a>
+        </li>
+        <li class="md-nav__item"><a href="#productivity-performance" class="md-nav__link">Productivity Performance</a>
+        </li>
+        <li class="md-nav__item"><a href="#productivity-state" class="md-nav__link">Productivity State</a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#calculate-land-cover" class="md-nav__link">Calculate land cover</a>
+        </li>
+        <li class="md-nav__item"><a href="#calculate-soil-carbon" class="md-nav__link">Calculate soil carbon</a>
+        </li>
+        <li class="md-nav__item"><a href="#compute-sdg-indicator-15-3-1" class="md-nav__link">Compute SDG Indicator 15.3.1</a>
+        </li></ul>
+            </nav>
+        </li>
+    
+<li class="md-nav__item"><a class="md-nav__extra_link" href="../_sources/Qgis_Plugin/Calculate_sdg15.rst.txt">Show Source</a> </li>
+
+<li id="searchbox" class="md-nav__item"></li>
+
+  </ul>
+</nav>
+              </div>
             </div>
-        </section>
+          </div>
         
-        <article class="post container" itemscope itemtype="http://schema.org/BlogPosting">
-            <div class="row">
-                <div class="col-md-8 markdown-body">
-                    
+        <div class="md-content">
+          <article class="md-content__inner md-typeset" role="main">
+            
   <section id="calculate-sdg-15-3-1">
-<h1><a class="toc-backref" href="#id1">Calculate SDG 15.3.1</a><a class="headerlink" href="#calculate-sdg-15-3-1" title="Permalink to this headline">¶</a></h1>
+<h1 id="qgis-plugin-calculate-sdg15--page-root"><a class="toc-backref" href="#qgis-plugin-calculate-sdg15--page-root">Calculate SDG 15.3.1</a><a class="headerlink" href="#qgis-plugin-calculate-sdg15--page-root" title="Permalink to this headline">¶</a></h1>
 <div style="border: 1px solid; margin-bottom: 2em; box-shadow: 2px 3px #888888; overflow: hidden; max-width: 100%; height: auto;">
-    <video style="width: 100%; height: 100%;" controls>
-        <source src="https://res.cloudinary.com/acemobile/video/upload/v1613816215/MISLAND/SDG15_3_1.mp4" type="video/mp4">
+<video controls="" style="width: 100%; height: 100%;">
+<source src="https://res.cloudinary.com/acemobile/video/upload/v1613816215/MISLAND/SDG15_3_1.mp4" type="video/mp4"/>
         Your browser does not support the video tag.
     </video>
-</div><img alt="_static/common/plugin_toolbar_calculate.png" class="align-center" src="_static/common/plugin_toolbar_calculate.png" />
+</div><img alt="_static/common/plugin_toolbar_calculate.png" class="align-center" src="_static/common/plugin_toolbar_calculate.png"/>
 <p>Sustainable Development Goal 15.3 intends to combat desertification, restore
 degraded land and soil, including land affected by desertification, drought and
 floods, and strive to achieve a land degradation-neutral world by 2030. In
@@ -178,9 +263,9 @@ in soil organic carbon.</p>
 <p>To select the methods and datasets to calculate these indicators, indicators
 click on the calculator icon highlighted above. This will open up the
 “Calculate Indicators” dialog box.</p>
-<img alt="_static/documentation/calculate/LDindicator.png" class="align-center" src="_static/documentation/calculate/LDindicator.png" />
+<img alt="_static/documentation/calculate/LDindicator.png" class="align-center" src="_static/documentation/calculate/LDindicator.png"/>
 <p>Select the Land degradation indicator (SDG indicator 15.3.1) to open the window for this analysis.</p>
-<img alt="_static/documentation/calculate/SDG15.png" class="align-center" src="_static/documentation/calculate/SDG15.png" />
+<img alt="_static/documentation/calculate/SDG15.png" class="align-center" src="_static/documentation/calculate/SDG15.png"/>
 <p>There are several options for calculating the SDG 15.3.1 Indicator.
 MISLAND supports calculating the indicator using the same process as was
 used by the UNCCD for the default data provided to countries for the 2018
@@ -218,7 +303,7 @@ will calculate all three indicators at once, but with limited options for
 customization, or 2) using individual tools for each indicator that offer
 complete control over how they are calculated.</p>
 <section id="calculate-indicators-with-simplified-tool">
-<h2><a class="toc-backref" href="#id2">Calculate indicators with simplified tool</a><a class="headerlink" href="#calculate-indicators-with-simplified-tool" title="Permalink to this headline">¶</a></h2>
+<h2 id="calculate-indicators-with-simplified-tool"><a class="toc-backref" href="#id2">Calculate indicators with simplified tool</a><a class="headerlink" href="#calculate-indicators-with-simplified-tool" title="Permalink to this headline">¶</a></h2>
 <p>This tool allows users to calculate all three sub-indicators in one step.
 Select the “Calculate all three sub-indicators in one step” button.</p>
 <ol class="arabic simple">
@@ -226,24 +311,24 @@ Select the “Calculate all three sub-indicators in one step” button.</p>
 for the analysis and select one of the two Land Productivity datasets.
 Select Next.</p></li>
 </ol>
-<img alt="_static/documentation/calculate/image022.png" class="align-center" src="_static/documentation/calculate/image022.png" />
+<img alt="_static/documentation/calculate/image022.png" class="align-center" src="_static/documentation/calculate/image022.png"/>
 <ol class="arabic simple" start="2">
 <li><p>Select the Land Cover dataset. The first option is the default ESA dataset.</p></li>
 </ol>
-<img alt="_static/documentation/calculate/image023.png" class="align-center" src="_static/documentation/calculate/image023.png" />
+<img alt="_static/documentation/calculate/image023.png" class="align-center" src="_static/documentation/calculate/image023.png"/>
 <ol class="arabic simple" start="3">
 <li><p>Select Edit definition to change the aggregation from the ESA Land Cover
 dataset into 7 classes.</p></li>
 </ol>
-<img alt="_static/documentation/calculate/image024.png" class="align-center" src="_static/documentation/calculate/image024.png" />
+<img alt="_static/documentation/calculate/image024.png" class="align-center" src="_static/documentation/calculate/image024.png"/>
 <p>The second option allows users to upload a custom land cover dataset. This
 requires two datasets to compare change over time. Select Next.</p>
-<img alt="_static/documentation/calculate/image025.png" class="align-center" src="_static/documentation/calculate/image025.png" />
+<img alt="_static/documentation/calculate/image025.png" class="align-center" src="_static/documentation/calculate/image025.png"/>
 <ol class="arabic simple" start="4">
 <li><p>The user can now define the effects of land cover change and how it is
 classified as degrading or improving.</p></li>
 </ol>
-<img alt="_static/documentation/calculate/image026.png" class="align-center" src="_static/documentation/calculate/image026.png" />
+<img alt="_static/documentation/calculate/image026.png" class="align-center" src="_static/documentation/calculate/image026.png"/>
 <ol class="arabic simple" start="5">
 <li><p>Select an area to run the analysis or upload a shapefile boundary</p></li>
 </ol>
@@ -257,21 +342,21 @@ its partner organizations and contributors.</p>
 choose an official boundary provided by the designated office of their
 country.</p>
 </div>
-<img alt="_static/documentation/calculate/image027.png" class="align-center" src="_static/documentation/calculate/image027.png" />
+<img alt="_static/documentation/calculate/image027.png" class="align-center" src="_static/documentation/calculate/image027.png"/>
 <ol class="arabic simple" start="6">
 <li><p>Name the task and make notes for future reference</p></li>
 <li><p>Click on “Calculate” to submit your task to Google Earth Engine</p></li>
 </ol>
-<img alt="_static/documentation/calculate/image028.png" class="align-center" src="_static/documentation/calculate/image028.png" />
+<img alt="_static/documentation/calculate/image028.png" class="align-center" src="_static/documentation/calculate/image028.png"/>
 </section>
 <section id="calculate-productivity">
-<h2><a class="toc-backref" href="#id3">Calculate productivity</a><a class="headerlink" href="#calculate-productivity" title="Permalink to this headline">¶</a></h2>
+<h2 id="calculate-productivity"><a class="toc-backref" href="#id3">Calculate productivity</a><a class="headerlink" href="#calculate-productivity" title="Permalink to this headline">¶</a></h2>
 <p>Productivity measures the trajectory, performance and state of primary
 productivity using either 8km AVHRR, 250m MODIS or 30m LANDSAT 7 (under development) datasets. The user can select
 one or multiple indicators to calculate, the NDVI dataset, name the tasks and
 enter in explanatory notes for their intended reporting area.</p>
 <section id="productivity-trajectory">
-<h3><a class="toc-backref" href="#id4">Productivity Trajectory</a><a class="headerlink" href="#productivity-trajectory" title="Permalink to this headline">¶</a></h3>
+<h3 id="productivity-trajectory"><a class="toc-backref" href="#id4">Productivity Trajectory</a><a class="headerlink" href="#productivity-trajectory" title="Permalink to this headline">¶</a></h3>
 <p>Trajectory assesses the rate of change of productivity over time. To calculate
 trajectory:</p>
 <ol class="arabic simple">
@@ -283,7 +368,7 @@ trajectory:</p>
 <p>The valid date range is set by the NDVI dataset selected within the first
 tab: AVHRR dates compare 1982-2015 and MODIS 2001-2016.</p>
 </div>
-<img alt="_static/documentation/calculate/image029.png" class="align-center" src="_static/documentation/calculate/image029.png" />
+<img alt="_static/documentation/calculate/image029.png" class="align-center" src="_static/documentation/calculate/image029.png"/>
 <ol class="arabic simple" start="3">
 <li><p>In the tab “Advanced”, select the method to be used to compute the
 productivity trajectory analysis. The options are:</p></li>
@@ -309,10 +394,10 @@ represent overall trends in primary productivity independent of climate.</p></li
 <li><p><strong>WUE</strong>: is defined as the ratio between net primary production (NPP), in
 this case annual integrals of NDVI, and evapotranspiration.</p></li>
 </ul>
-<img alt="_static/documentation/calculate/image030.png" class="align-center" src="_static/documentation/calculate/image030.png" />
+<img alt="_static/documentation/calculate/image030.png" class="align-center" src="_static/documentation/calculate/image030.png"/>
 </section>
 <section id="productivity-performance">
-<h3><a class="toc-backref" href="#id5">Productivity Performance</a><a class="headerlink" href="#productivity-performance" title="Permalink to this headline">¶</a></h3>
+<h3 id="productivity-performance"><a class="toc-backref" href="#id5">Productivity Performance</a><a class="headerlink" href="#productivity-performance" title="Permalink to this headline">¶</a></h3>
 <p>Performance is a comparison of how productivity in an area compares to
 productivity in similar areas at the same point in time. To calculate
 performance:</p>
@@ -321,7 +406,7 @@ performance:</p>
 </ol>
 </section>
 <section id="productivity-state">
-<h3><a class="toc-backref" href="#id6">Productivity State</a><a class="headerlink" href="#productivity-state" title="Permalink to this headline">¶</a></h3>
+<h3 id="productivity-state"><a class="toc-backref" href="#id6">Productivity State</a><a class="headerlink" href="#productivity-state" title="Permalink to this headline">¶</a></h3>
 <p>State performs a comparison of how current productivity in an area compares to
 past productivity. To calculate state:</p>
 <ol class="arabic simple">
@@ -336,12 +421,12 @@ administrative boundary from a drop-down menu.</p></li>
 <li><p>The user can provide a shapefile, KML, or geojson defining an area of
 interest. Once this is done, Select Next.</p></li>
 </ol>
-<img alt="_static/documentation/calculate/image031.png" class="align-center" src="_static/documentation/calculate/image031.png" />
+<img alt="_static/documentation/calculate/image031.png" class="align-center" src="_static/documentation/calculate/image031.png"/>
 <ol class="arabic simple" start="3">
 <li><p>The next step is to write a Task name and some notes to indicate which
 options were selected for the analysis.</p></li>
 </ol>
-<img alt="_static/documentation/calculate/image032.png" class="align-center" src="_static/documentation/calculate/image032.png" />
+<img alt="_static/documentation/calculate/image032.png" class="align-center" src="_static/documentation/calculate/image032.png"/>
 <ol class="arabic simple" start="4">
 <li><p>When all the parameters have been defined, click “Calculate”, and the task
 will be submitted to Google Earth Engine for computing. When the task is
@@ -355,11 +440,11 @@ will open for you to select where to save the layer and to assign it a name.
 Then click “Save”. The layer will be saved on your computer and
 automatically loaded into yoour current QGIS project.</p></li>
 </ol>
-<img alt="_static/documentation/calculate/output_productivity.png" class="align-center" src="_static/documentation/calculate/output_productivity.png" />
+<img alt="_static/documentation/calculate/output_productivity.png" class="align-center" src="_static/documentation/calculate/output_productivity.png"/>
 </section>
 </section>
 <section id="calculate-land-cover">
-<h2><a class="toc-backref" href="#id7">Calculate land cover</a><a class="headerlink" href="#calculate-land-cover" title="Permalink to this headline">¶</a></h2>
+<h2 id="calculate-land-cover"><a class="toc-backref" href="#id7">Calculate land cover</a><a class="headerlink" href="#calculate-land-cover" title="Permalink to this headline">¶</a></h2>
 <p>Changes in land cover is one of the indicators used to track potential land
 degradation which need to be reported to the UNCCD and to track progress
 towards SDG 15.3.1. While some land cover transitions indicate, in most cases,
@@ -375,11 +460,11 @@ stability or improvement.</p>
 <li><p>Click on the Calculate Indicators button from the toolbox bar, then select
 Land cover.</p></li>
 </ol>
-<img alt="_static/documentation/calculate/image033.png" class="align-center" src="_static/documentation/calculate/image033.png" />
+<img alt="_static/documentation/calculate/image033.png" class="align-center" src="_static/documentation/calculate/image033.png"/>
 <ol class="arabic simple" start="2">
 <li><p>Within the “Land Cover Setup tab” the user selects the baseline and target years</p></li>
 </ol>
-<img alt="_static/documentation/calculate/image034.png" class="align-center" src="_static/documentation/calculate/image034.png" />
+<img alt="_static/documentation/calculate/image034.png" class="align-center" src="_static/documentation/calculate/image034.png"/>
 <ol class="arabic simple" start="3">
 <li><p>The land cover aggregation can be customized using the ‘Edit definition’
 button. The user can define their own aggregation of land cover classes from
@@ -392,7 +477,7 @@ definition”</p></li>
 </ol>
 </li>
 </ol>
-<img alt="_static/documentation/calculate/image035.png" class="align-center" src="_static/documentation/calculate/image035.png" />
+<img alt="_static/documentation/calculate/image035.png" class="align-center" src="_static/documentation/calculate/image035.png"/>
 <ol class="arabic" start="4">
 <li><p>Within the “Define Degradation tab” user define the meaning of each land
 cover transition in terms of degradation. The options are: stable (0),
@@ -407,7 +492,7 @@ effect on the land degradation identified by this subindicator.</p>
 their own.</p>
 </li>
 </ol>
-<img alt="_static/documentation/calculate/image036.png" class="align-center" src="_static/documentation/calculate/image036.png" />
+<img alt="_static/documentation/calculate/image036.png" class="align-center" src="_static/documentation/calculate/image036.png"/>
 <ol class="arabic simple" start="5">
 <li><p>The next step is to define the study area on which to perform the analysis.
 The toolbox allows this task to be completed in one of two ways:</p>
@@ -418,11 +503,11 @@ administrative boundary from a drop-down menu.</p></li>
 </ol>
 </li>
 </ol>
-<img alt="_static/documentation/calculate/image037.png" class="align-center" src="_static/documentation/calculate/image037.png" />
+<img alt="_static/documentation/calculate/image037.png" class="align-center" src="_static/documentation/calculate/image037.png"/>
 <ol class="arabic simple" start="6">
 <li><p>The next step is to add the task name and relevant notes for the analysis.</p></li>
 </ol>
-<img alt="_static/documentation/calculate/image038.png" class="align-center" src="_static/documentation/calculate/image038.png" />
+<img alt="_static/documentation/calculate/image038.png" class="align-center" src="_static/documentation/calculate/image038.png"/>
 <ol class="arabic simple" start="7">
 <li><p>When all the parameters have been defined, click “Calculate”, and the task
 will be submitted to Google Earth Engine for computing. When the task is
@@ -436,32 +521,32 @@ will open for you to select where to save the layer and to assign it a name.
 Then click “Save”. The layer will be saved on your computer and
 automatically loaded into yoour current QGIS project.</p></li>
 </ol>
-<img alt="_static/documentation/calculate/output_landcover.png" class="align-center" src="_static/documentation/calculate/output_landcover.png" />
+<img alt="_static/documentation/calculate/output_landcover.png" class="align-center" src="_static/documentation/calculate/output_landcover.png"/>
 </section>
 <section id="calculate-soil-carbon">
-<h2><a class="toc-backref" href="#id8">Calculate soil carbon</a><a class="headerlink" href="#calculate-soil-carbon" title="Permalink to this headline">¶</a></h2>
+<h2 id="calculate-soil-carbon"><a class="toc-backref" href="#id8">Calculate soil carbon</a><a class="headerlink" href="#calculate-soil-carbon" title="Permalink to this headline">¶</a></h2>
 <p>Soil Organic Carbon is calculated as a proxy for carbon stocks. It is measured
 using soil data and changes in land cover.</p>
 <p>To calculate degradation in soil organic carbon:</p>
-<img alt="_static/documentation/calculate/image039.png" class="align-center" src="_static/documentation/calculate/image039.png" />
+<img alt="_static/documentation/calculate/image039.png" class="align-center" src="_static/documentation/calculate/image039.png"/>
 <ol class="arabic simple">
 <li><p>Select Soil organic carbon button under Calculate Indicators</p></li>
 </ol>
-<img alt="_static/documentation/calculate/image040.png" class="align-center" src="_static/documentation/calculate/image040.png" />
+<img alt="_static/documentation/calculate/image040.png" class="align-center" src="_static/documentation/calculate/image040.png"/>
 <ol class="arabic simple" start="2">
 <li><p>The Land Cover Setup tab allows the user to define the period for analysis
 with the baseline and target year. Users can select the Edit definition
 button to change the land cover aggregation method or upload a datasets.</p></li>
 </ol>
-<img alt="_static/documentation/calculate/image041.png" class="align-center" src="_static/documentation/calculate/image041.png" />
+<img alt="_static/documentation/calculate/image041.png" class="align-center" src="_static/documentation/calculate/image041.png"/>
 <ol class="arabic simple" start="3">
 <li><p>The “Advanced” tab allows users to specify the Climate regime.</p></li>
 </ol>
-<img alt="_static/documentation/calculate/image042.png" class="align-center" src="_static/documentation/calculate/image042.png" />
+<img alt="_static/documentation/calculate/image042.png" class="align-center" src="_static/documentation/calculate/image042.png"/>
 <ol class="arabic simple" start="4">
 <li><p>Users can select an area or upload a polygon shapefile for analysis</p></li>
 </ol>
-<img alt="_static/documentation/calculate/image043.png" class="align-center" src="_static/documentation/calculate/image043.png" />
+<img alt="_static/documentation/calculate/image043.png" class="align-center" src="_static/documentation/calculate/image043.png"/>
 <ol class="arabic simple" start="6">
 <li><p>The next step is to add the task name and relevant notes for the analysis.</p></li>
 <li><p>When all the parameters have been defined, click “Calculate”, and the task
@@ -476,10 +561,10 @@ will open for you to select where to save the layer and to assign it a name.
 Then click “Save”. The layer will be saved on your computer and
 automatically loaded into your current QGIS project.</p></li>
 </ol>
-<img alt="_static/documentation/calculate/output_soc.png" class="align-center" src="_static/documentation/calculate/output_soc.png" />
+<img alt="_static/documentation/calculate/output_soc.png" class="align-center" src="_static/documentation/calculate/output_soc.png"/>
 </section>
 <section id="compute-sdg-indicator-15-3-1">
-<h2><a class="toc-backref" href="#id9">Compute SDG Indicator 15.3.1</a><a class="headerlink" href="#compute-sdg-indicator-15-3-1" title="Permalink to this headline">¶</a></h2>
+<h2 id="compute-sdg-indicator-15-3-1"><a class="toc-backref" href="#id9">Compute SDG Indicator 15.3.1</a><a class="headerlink" href="#compute-sdg-indicator-15-3-1" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
 <li><p>Once you have computed the three sub-indicators (productivity, land cover
 and soil organic carbon), and they are loaded into the QGIS project. Click
@@ -489,20 +574,20 @@ indicator and summary table”.</p></li>
 <li><p>The input window will open already populated with the correct sub-indicators
 (that if you have them loaded to the QGIS map)</p></li>
 </ol>
-<img alt="_static/documentation/calculate/sdg_input.png" class="align-center" src="_static/documentation/calculate/sdg_input.png" />
+<img alt="_static/documentation/calculate/sdg_input.png" class="align-center" src="_static/documentation/calculate/sdg_input.png"/>
 <ol class="arabic simple" start="3">
 <li><p>Select the name and location where to save the output raster layer and the
 excel file with the areas computed.</p></li>
 </ol>
-<img alt="_static/documentation/calculate/sdg_output.png" class="align-center" src="_static/documentation/calculate/sdg_output.png" />
+<img alt="_static/documentation/calculate/sdg_output.png" class="align-center" src="_static/documentation/calculate/sdg_output.png"/>
 <ol class="arabic simple" start="4">
 <li><p>Define the area of analysis. In this example, the country boundary.</p></li>
 </ol>
-<img alt="_static/documentation/calculate/sdg_area.png" class="align-center" src="_static/documentation/calculate/sdg_area.png" />
+<img alt="_static/documentation/calculate/sdg_area.png" class="align-center" src="_static/documentation/calculate/sdg_area.png"/>
 <ol class="arabic simple" start="5">
 <li><p>Give a name to the task and click “Calculate”</p></li>
 </ol>
-<img alt="_static/documentation/calculate/sdg_options.png" class="align-center" src="_static/documentation/calculate/sdg_options.png" />
+<img alt="_static/documentation/calculate/sdg_options.png" class="align-center" src="_static/documentation/calculate/sdg_options.png"/>
 <ol class="arabic simple" start="6">
 <li><p>This calculation is run on your computer, so depending on the size of the
 area and the computing power of your computer, it could take a few minutes.
@@ -510,12 +595,12 @@ When completed, the final SDG indicator will be loaded into the QGIS map and
 the Excel file with the areas will be saved in the folder you selected. when
 done, a message will pop up.</p></li>
 </ol>
-<img alt="_static/documentation/calculate/sdg_done.png" class="align-center" src="_static/documentation/calculate/sdg_done.png" />
+<img alt="_static/documentation/calculate/sdg_done.png" class="align-center" src="_static/documentation/calculate/sdg_done.png"/>
 <ol class="arabic simple" start="7">
 <li><p>Click OK and two layers will be loaded to your map: the <strong>5 classes
 productivity</strong> and the <strong>SDG 15.3.1</strong> indicators.</p></li>
 </ol>
-<img alt="_static/documentation/calculate/sdg_maps.png" class="align-center" src="_static/documentation/calculate/sdg_maps.png" />
+<img alt="_static/documentation/calculate/sdg_maps.png" class="align-center" src="_static/documentation/calculate/sdg_maps.png"/>
 <ol class="arabic simple" start="8">
 <li><p>If you navigate to the folder you selected for storing the files, you can
 open the Excel files with the areas computed for each of the sub-indicators
@@ -523,123 +608,68 @@ and the final SDG. NOTE: You may get an error message when opening the file,
 just click ok and the file will open regardless. We are working to fix this
 error.</p></li>
 </ol>
-<img alt="_static/documentation/calculate/sdg_excel.png" class="align-center" src="_static/documentation/calculate/sdg_excel.png" />
+<img alt="_static/documentation/calculate/sdg_excel.png" class="align-center" src="_static/documentation/calculate/sdg_excel.png"/>
 <div class="toctree-wrapper compound">
 </div>
 </section>
 </section>
 
 
-                    <!-- Comments -->
-                    
-                </div>
-                <div class="col-md-4 toc">
-                    <h3>Table Of Contents</h3>
-                    <div id="toc">
-                        
-                        <p class="caption" role="heading"><span class="caption-text">About</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/general_information.html">General Infortmation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/data.html">Data sources</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/Layers.html">Dataset coding</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/faq.html">Frequently asked questions</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Background</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Background/LD_indicators.html">Land Degradation Indicators</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Background/LD_indicators.html#sdg15-3-1-indicator">SDG15.3.1 Indicator</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Background/LD_indicators.html#vegetation-loss-gain-hotspots">Vegetation Loss/Gain hotspots</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Background/LD_indicators.html#forest-change">Forest Change</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Web Service Guide</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Service/Service_Guide.html">Serivice Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Service/Calculate_SDG.html">SDG 15.3.1 indicator</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Service/Calculate_vegetationloss.html">Calculate Vegetation Loss/Gain indicators</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Service/Calculate_Forestloss.html">Calculate Forest Change</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Service/Calculate_Medalus.html">Calculating Sensitivity to Desertification (MEDALUS)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Service/Download_results.html">Exporting Outputs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Service/Download_data.html">Download data</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Qgis Plugin Guide</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="plugin_development.html">Plugin Development</a></li>
-<li class="toctree-l1"><a class="reference internal" href="before_installing.html">Before installing the toolbox</a></li>
-<li class="toctree-l1"><a class="reference internal" href="installing.html">Installing the toolbox</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Registration.html">Registration and settings</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Calculate SDG 15.3.1</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#calculate-indicators-with-simplified-tool">Calculate indicators with simplified tool</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#calculate-productivity">Calculate productivity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#calculate-land-cover">Calculate land cover</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#calculate-soil-carbon">Calculate soil carbon</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#compute-sdg-indicator-15-3-1">Compute SDG Indicator 15.3.1</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Calculate_vegetation.html">Calculate Vegetation Degradation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Calculate_forest.html">Calculate Forest Degradation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Calculate_medalus.html">Calculate Desertification (MEDALUS)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gee_tasks.html">View and download results</a></li>
-<li class="toctree-l1"><a class="reference internal" href="load_data.html">Load Custom Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Download_data.html">Download raw data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="visualization.html">Visualization tools</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">QGIS Plugin Training Material</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="sdg_15_training.html">Calculate SDG 15.3.1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vegetation_degradation_training.html">Calculate Vegetation/Forest Degradation</a></li>
-</ul>
-
-                        
-                    </div>
-                </div>
+          </article>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer class="md-footer">
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+          
+            <a href="Registration.html" title="Registration and settings"
+               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
+               rel="prev">
+              <div class="md-flex__cell md-flex__cell--shrink">
+                <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+              </div>
+              <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+                <span class="md-flex__ellipsis">
+                  <span
+                      class="md-footer-nav__direction"> Previous </span> Registration and settings </span>
+              </div>
+            </a>
+          
+          
+            <a href="Calculate_vegetation.html" title="Calculate Vegetation Degradation"
+               class="md-flex md-footer-nav__link md-footer-nav__link--next"
+               rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
+                class="md-flex__ellipsis"> <span
+                class="md-footer-nav__direction"> Next </span> Calculate Vegetation Degradation </span>
             </div>
-        </article>
-        
-        
-        <footer class="container">
-            <div class="site-footer">
-                <div class="copyright pull-left">
-                    
-                    &#169; Copyright 2021, Derick Ongeri.
-                    
-                </div>
-                <div class="source_code">
-                    
-                    <a href="javascript:window.scrollTo(20,20)">
-                        <i class="fa fa-arrow-up" title="To The Top" aria-hidden="true"></i>
-                    </a>
-                    
-                </div>
-                
-                <div class="sphinx pull-right">
-                    
-                    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.0
-                    
-                </div>
-                
+            <div class="md-flex__cell md-flex__cell--shrink"><i
+                class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
             </div>
-            
-        </footer>
+          
+        </a>
         
-        
-        
-     
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script> 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script> 
-    <script src="../_static/jquery.js"></script> 
-    <script src="../_static/underscore.js"></script> 
-    <script src="../_static/doctools.js"></script> 
-     
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-    <script type="text/javascript" src="../_static/js/script.js"></script>
-    <script type="text/javascript" src="../_static/js/underscore-min.js"></script>
-    <script type="text/javascript" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-
-    
-
-        
-    </body>
+      </nav>
+    </div>
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright">
+          <div class="md-footer-copyright__highlight">
+              &#169; Copyright 2021, Derick Ongeri.
+              
+          </div>
+            Created using
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
+             and
+            <a href="https://github.com/bashtage/sphinx-material/">Material for
+              Sphinx</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../_static/javascripts/application.js"></script>
+  <script>app.initialize({version: "1.0.4", url: {base: ".."}})</script>
+  </body>
 </html>

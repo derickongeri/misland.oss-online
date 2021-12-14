@@ -1,147 +1,244 @@
 
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
+
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="title" content="MISLAND">
-        <meta name="version" content="">
-        <meta name="copyright" content="2021, Derick Ongeri">
-        
-        <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-        
-        <!-- Favicon Icon -->
-        
-        <link rel="shortcut icon" href="../_static/Logo.svg"/>
-        
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="lang:clipboard.copy" content="Copy to clipboard">
+  <meta name="lang:clipboard.copied" content="Copied to clipboard">
+  <meta name="lang:search.language" content="en">
+  <meta name="lang:search.pipeline.stopwords" content="True">
+  <meta name="lang:search.pipeline.trimmer" content="True">
+  <meta name="lang:search.result.none" content="No matching documents">
+  <meta name="lang:search.result.one" content="1 matching document">
+  <meta name="lang:search.result.other" content="# matching documents">
+  <meta name="lang:search.tokenizer" content="[\s\-]+">
 
-        
-        <title>Calculate Desertification (MEDALUS)</title>
-        
+  
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto:300,400,400i,700&display=fallback" rel="stylesheet">
 
-        <script type="text/javascript" src="../_static/js/jquery.min.js"></script>
-       
-        
-    <link rel="stylesheet" href="../_static/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../_static/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../_static/css/hover-min.css">
-    <!--<link rel="stylesheet" href="../_static/octicons/lib/octicons.css">-->
-    <!--<link rel="stylesheet" href="../_static/primer-markdown/lib/user-content.min.css">-->
-    <link rel="stylesheet" href="../_static/css/syntax.css" type="text/css" />
+    <style>
+      body,
+      input {
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif
+      }
 
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
-    
+      code,
+      kbd,
+      pre {
+        font-family: "Roboto Mono", "Courier New", Courier, monospace
+      }
+    </style>
+  
+
+  <link rel="stylesheet" href="../_static/stylesheets/application.css"/>
+  <link rel="stylesheet" href="../_static/stylesheets/application-palette.css"/>
+  <link rel="stylesheet" href="../_static/stylesheets/application-fixes.css"/>
+  
+  <link rel="stylesheet" href="../_static/fonts/material-icons.css"/>
+  
+  <meta name="theme-color" content="#3f51b5">
+  <script src="../_static/javascripts/modernizr.js"></script>
+  
+  
+  
+    <title>Calculate Desertification (MEDALUS) &#8212; MISLAND 0.0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/material.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/Logo.svg"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="View and download results" href="gee_tasks.html" />
+    <link rel="prev" title="Calculate Forest Degradation" href="Calculate_forest.html" />
+  
+   
+
+  </head>
+  <body dir=ltr
+        data-md-color-primary=blue-grey data-md-color-accent=blue>
+  
+  <svg class="md-svg">
+    <defs data-children-count="0">
       
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
       
-    
+    </defs>
+  </svg>
+  
+  <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer">
+  <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search">
+  <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+  <a href="#Qgis_Plugin/Calculate_medalus" tabindex="1" class="md-skip"> Skip to content </a>
+  <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex navheader">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../index.html" title="MISLAND 0.0.1 documentation"
+           class="md-header-nav__button md-logo">
+          
+              <img src="../_static/Logo.png" height="26"
+                   alt="MISLAND 0.0.1 documentation logo">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          <span class="md-header-nav__topic">MISLAND 0.0.1 documentation</span>
+          <span class="md-header-nav__topic"> Calculate Desertification (MEDALUS) </span>
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+        
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" action="../search.html" method="get" name="search">
+      <input type="text" class="md-search__input" name="q" placeholder="Search"
+             autocapitalize="off" autocomplete="off" spellcheck="false"
+             data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
       
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       
-    
+  
+  <script src="../_static/javascripts/version_dropdown.js"></script>
+  <script>
+    var json_loc = "../"versions.json"",
+        target_loc = "../../",
+        text = "Versions";
+    $( document ).ready( add_version_dropdown(json_loc, target_loc, text));
+  </script>
+  
 
-    
+    </div>
+  </nav>
+</header>
 
+  
+  <div class="md-container">
     
-
-    <script type="text/javascript" src="../_static/js/bootstrap.min.js"></script>
     
     
+  <nav class="md-tabs" data-md-component="tabs">
+    <div class="md-tabs__inner md-grid">
+      <ul class="md-tabs__list">
+          <li class="md-tabs__item"><a href="../index.html" class="md-tabs__link">MISLAND 0.0.1 documentation</a></li>
+            
+            <li class="md-tabs__item"><a href="http://194.163.176.189/#/" class="md-tabs__link">Home</a></li>
+            
+            <li class="md-tabs__item"><a href="http://194.163.176.189/#/dashboard" class="md-tabs__link">Dashboard</a></li>
+      </ul>
+    </div>
+  </nav>
+    <main class="md-main">
+      <div class="md-main__inner md-grid" data-md-component="container">
+        
+          <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../index.html" title="MISLAND 0.0.1 documentation" class="md-nav__button md-logo">
+      
+        <img src="../_static/Logo.png" alt=" logo" width="48" height="48">
+      
+    </a>
+    <a href="../index.html"
+       title="MISLAND 0.0.1 documentation">MISLAND 0.0.1 documentation</a>
+  </label>
+  
 
-
-        
-        
-        
-        
-        
-        <!-- Genindex Linktag -->
-        <link rel="index" title="Index" href="../genindex.html" />
-        
-        
-        <!-- Search Linktag -->
-        <link rel="search" title="Search" href="../search.html" />
-        
-        
-        
-        <!-- Next Linktag -->
-        <link rel="next" title="View and download results" href="gee_tasks.html" />
-        
-        
-        <!-- Previous Linktag -->
-        <link rel="prev" title="Calculate Forest Degradation" href="Calculate_forest.html" />
-        
-        
-        
-        
-    </head>
-    <body>
-        
-        <header class="site-header">
-            <div class="container">
-                <a id="site-header-brand" href="/" title="MISLAND">
-                    <i class="fa fa-misland-logo.ico" aria-hidden="true"></i> MISLAND
-                </a>
-                <nav class="site-header-nav" role="navigation">
-                
-                
-                    <a href="http://194.163.176.189/#/" class=" site-header-nav-item hvr-underline-from-center"
-               target="_self"
-               title="Home">
-                        Home
-                    </a>
-                
-                    <a href="http://194.163.176.189/#/dashboard" class=" site-header-nav-item hvr-underline-from-center"
-               target="_self"
-               title="Dashboard">
-                        Dashboard
-                    </a>
-                
-                    <a href="../index.html" class=" site-header-nav-item hvr-underline-from-center"
-               target="_self"
-               title="MISLAND">
-                        Documentation
-                    </a>
-                
-                </nav>
+</nav>
+              </div>
             </div>
-        </header>
-        
-        <section class="jumbotron geopattern" data-pattern-id="Qgis_Plugin/Calculate_medalus">
-            <div class="container">
-                <div id="jumbotron-meta-info">
-                    <h1>Calculate Desertification (MEDALUS)</h1>
-                    <span class="meta-info">
-                        
-                        
-                        
-                        
-                        
-                        
-                    </span>
-                </div>
+          </div>
+          <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                
+<nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">Contents</label>
+  <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#qgis-plugin-calculate-medalus--page-root" class="md-nav__link">Calculate Desertification (MEDALUS)</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#soil-quality-index-sqi" class="md-nav__link">1. Soil Quality Index (SQI)</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#a-using-default-data-computed-on-google-earth-engine" class="md-nav__link">a. Using default data (Computed on Google Earth Engine)</a>
+        </li>
+        <li class="md-nav__item"><a href="#b-using-custom-data-computed-locally-on-device" class="md-nav__link">b. Using Custom data (Computed locally on device)</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#raw-data-download" class="md-nav__link">Raw Data Download</a>
+        </li>
+        <li class="md-nav__item"><a href="#extracting-soil-drainage-soil-texture-and-rock-fragment-layers-from-hwsd-data" class="md-nav__link">Extracting Soil Drainage, Soil Texture and Rock Fragment Layers from HWSD DATA</a>
+        </li>
+        <li class="md-nav__item"><a href="#compute-soil-quality-index" class="md-nav__link">Compute Soil Quality Index</a>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#vegetation-quality-index-vqi" class="md-nav__link">2. Vegetation Quality Index (VQI)</a>
+        </li>
+        <li class="md-nav__item"><a href="#climate-quality-index-cqi" class="md-nav__link">3. Climate Quality Index (CQI)</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#id1" class="md-nav__link">a. Using default data (Computed on Google Earth Engine)</a>
+        </li>
+        <li class="md-nav__item"><a href="#id2" class="md-nav__link">b. Using Custom data (Computed locally on device)</a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#management-quality-index-mqi" class="md-nav__link">4. Management Quality Index (MQI)</a>
+        </li>
+        <li class="md-nav__item"><a href="#environmentally-sensitive-area-esa-index-combined-desertification-layer" class="md-nav__link">Environmentally sensitive area (ESA) Index (Combined Desertification Layer)</a>
+        </li></ul>
+            </nav>
+        </li>
+    
+<li class="md-nav__item"><a class="md-nav__extra_link" href="../_sources/Qgis_Plugin/Calculate_medalus.rst.txt">Show Source</a> </li>
+
+<li id="searchbox" class="md-nav__item"></li>
+
+  </ul>
+</nav>
+              </div>
             </div>
-        </section>
+          </div>
         
-        <article class="post container" itemscope itemtype="http://schema.org/BlogPosting">
-            <div class="row">
-                <div class="col-md-8 markdown-body">
-                    
+        <div class="md-content">
+          <article class="md-content__inner md-typeset" role="main">
+            
   <section id="calculate-desertification-medalus">
-<h1><a class="toc-backref" href="#id3">Calculate Desertification (MEDALUS)</a><a class="headerlink" href="#calculate-desertification-medalus" title="Permalink to this headline">¶</a></h1>
+<h1 id="qgis-plugin-calculate-medalus--page-root"><a class="toc-backref" href="#qgis-plugin-calculate-medalus--page-root">Calculate Desertification (MEDALUS)</a><a class="headerlink" href="#qgis-plugin-calculate-medalus--page-root" title="Permalink to this headline">¶</a></h1>
 <p>The Mediterranean Desertification and Land Use (MEDALUS) is the name of a project supported
 by Europe to assess, model and understand the desertification phenomena that increasingly
 affect the Mediterranean area. It provides a satisfied result about land degradation vulnerability.</p>
@@ -151,8 +248,8 @@ causing the desertification threat at a certain point. This approach is simple, 
 and acceptable to new indicators and parameters and can be adjusted to several level scales. , the method
 was used for the analysis of the main indicators identified to be driving forces of land degradation.</p>
 <div style="border: 1px solid; margin-bottom: 2em; box-shadow: 2px 3px #888888; overflow: hidden; max-width: 100%; height: auto;">
-    <video style="width: 100%; height: 100%;" controls>
-        <source src="https://res.cloudinary.com/acemobile/video/upload/v1614035859/MISLAND/medalus.mp4" type="video/mp4">
+<video controls="" style="width: 100%; height: 100%;">
+<source src="https://res.cloudinary.com/acemobile/video/upload/v1614035859/MISLAND/medalus.mp4" type="video/mp4"/>
         Your browser does not support the video tag.
     </video>
 </div><div class="admonition note">
@@ -190,7 +287,7 @@ was used for the analysis of the main indicators identified to be driving forces
 </ul>
 </div>
 <section id="soil-quality-index-sqi">
-<h2><a class="toc-backref" href="#id4">1. Soil Quality Index (SQI)</a><a class="headerlink" href="#soil-quality-index-sqi" title="Permalink to this headline">¶</a></h2>
+<h2 id="soil-quality-index-sqi"><a class="toc-backref" href="#id4">1. Soil Quality Index (SQI)</a><a class="headerlink" href="#soil-quality-index-sqi" title="Permalink to this headline">¶</a></h2>
 <p>Soil is a crucial factor in evaluating the Environmental Sensitivity of an ecosystem, especially in the arid,
 semi-arid and dry sub-humid zones. Soil properties related to desertification and degradation phenomena affect two principal parameters:
 (i) water storage and retention capacity;
@@ -198,11 +295,11 @@ semi-arid and dry sub-humid zones. Soil properties related to desertification an
 <p>The formula used to compute the SQI is as shown below:</p>
 <p><strong>SQI  = (Parent material x Depth x Texture x Slope x Drainage x Rock Fragments)^1/6</strong></p>
 <p>Default datasets used for sqi are as shown below:</p>
-<table class="docutils align-default">
+<table>
 <colgroup>
-<col style="width: 13%" />
-<col style="width: 13%" />
-<col style="width: 74%" />
+<col style="width: 13%"/>
+<col style="width: 13%"/>
+<col style="width: 74%"/>
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Indicator</strong></p></th>
@@ -245,76 +342,76 @@ semi-arid and dry sub-humid zones. Soil properties related to desertification an
 </ol>
 </div></blockquote>
 <section id="a-using-default-data-computed-on-google-earth-engine">
-<h3><a class="toc-backref" href="#id5">a. Using default data (Computed on Google Earth Engine)</a><a class="headerlink" href="#a-using-default-data-computed-on-google-earth-engine" title="Permalink to this headline">¶</a></h3>
+<h3 id="a-using-default-data-computed-on-google-earth-engine"><a class="toc-backref" href="#id5">a. Using default data (Computed on Google Earth Engine)</a><a class="headerlink" href="#a-using-default-data-computed-on-google-earth-engine" title="Permalink to this headline">¶</a></h3>
 <p>Inorder to compute Soil Quality Index using default data use the following steps.</p>
 <p>First open the calculate indicators toolbox and select MEDALUS then select the Soil Quality Index
 option as shown.</p>
-<img alt="_static/documentation/calculate/medalus_toolbox.png" class="align-center" src="_static/documentation/calculate/medalus_toolbox.png" />
-<img alt="_static/documentation/calculate/medalus_sqi.png" class="align-center" src="_static/documentation/calculate/medalus_sqi.png" />
+<img alt="_static/documentation/calculate/medalus_toolbox.png" class="align-center" src="_static/documentation/calculate/medalus_toolbox.png"/>
+<img alt="_static/documentation/calculate/medalus_sqi.png" class="align-center" src="_static/documentation/calculate/medalus_sqi.png"/>
 <p>Input soil depth (cm) and edit soil texture aggregation method according to case study as shown. This
 will reclassify soil depth values according to the definition selected.</p>
-<img alt="_static/documentation/calculate/sqi_toolbox.png" class="align-center" src="_static/documentation/calculate/sqi_toolbox.png" />
-<img alt="_static/documentation/calculate/sqi_texture_agg.png" class="align-center" src="_static/documentation/calculate/sqi_texture_agg.png" />
+<img alt="_static/documentation/calculate/sqi_toolbox.png" class="align-center" src="_static/documentation/calculate/sqi_toolbox.png"/>
+<img alt="_static/documentation/calculate/sqi_texture_agg.png" class="align-center" src="_static/documentation/calculate/sqi_texture_agg.png"/>
 <p>Proceed to select an area of interest and run the computation.</p>
 </section>
 <section id="b-using-custom-data-computed-locally-on-device">
-<h3><a class="toc-backref" href="#id6">b. Using Custom data (Computed locally on device)</a><a class="headerlink" href="#b-using-custom-data-computed-locally-on-device" title="Permalink to this headline">¶</a></h3>
+<h3 id="b-using-custom-data-computed-locally-on-device"><a class="toc-backref" href="#id6">b. Using Custom data (Computed locally on device)</a><a class="headerlink" href="#b-using-custom-data-computed-locally-on-device" title="Permalink to this headline">¶</a></h3>
 <p>This step requires the data to be available locally.</p>
 <section id="raw-data-download">
-<h4><a class="toc-backref" href="#id7">Raw Data Download</a><a class="headerlink" href="#raw-data-download" title="Permalink to this headline">¶</a></h4>
+<h4 id="raw-data-download"><a class="toc-backref" href="#id7">Raw Data Download</a><a class="headerlink" href="#raw-data-download" title="Permalink to this headline">¶</a></h4>
 <p>Inorder to prepare local data, <a class="reference download external" download="" href="https://webarchive.iiasa.ac.at/Research/LUC/External-World-soil-database/HTML/HWSD_Data.html?sb=4"><code class="xref download docutils literal notranslate"><span class="pre">Harmonized</span> <span class="pre">World</span> <span class="pre">Soil</span> <span class="pre">Database</span></code></a></p>
 </section>
 <section id="extracting-soil-drainage-soil-texture-and-rock-fragment-layers-from-hwsd-data">
-<h4><a class="toc-backref" href="#id8">Extracting Soil Drainage, Soil Texture and Rock Fragment Layers from HWSD DATA</a><a class="headerlink" href="#extracting-soil-drainage-soil-texture-and-rock-fragment-layers-from-hwsd-data" title="Permalink to this headline">¶</a></h4>
+<h4 id="extracting-soil-drainage-soil-texture-and-rock-fragment-layers-from-hwsd-data"><a class="toc-backref" href="#id8">Extracting Soil Drainage, Soil Texture and Rock Fragment Layers from HWSD DATA</a><a class="headerlink" href="#extracting-soil-drainage-soil-texture-and-rock-fragment-layers-from-hwsd-data" title="Permalink to this headline">¶</a></h4>
 <p>To extract the drainage, texture and soil group variables from the HWSD data follow these
 simple steps:</p>
 <ol class="arabic">
 <li><p>Open the HWSD data table on Microsoft Access. The variable to be extracted are D DRAINAGE(code),
 D USDA TEX CLASS(code), and T GRAVEL. To initiate the extraction, create a query design in the ‘show table’
 dialogue that pops up select HWSD DATA, D DRAINAGE and D USDA TEX CLASS tables.</p>
-<img alt="_static/documentation/calculate/sqi1.png" class="align-center" src="_static/documentation/calculate/sqi1.png" />
+<img alt="_static/documentation/calculate/sqi1.png" class="align-center" src="_static/documentation/calculate/sqi1.png"/>
 <p>In the ‘show table’ dialogue that pops up select HWSD DATA, D DRAINAGE and D USDA TEX CLASS tables</p>
-<img alt="_static/documentation/calculate/sqi2.png" class="align-center" src="_static/documentation/calculate/sqi2.png" />
+<img alt="_static/documentation/calculate/sqi2.png" class="align-center" src="_static/documentation/calculate/sqi2.png"/>
 </li>
 <li><p>From the HWSD DATA select the MU GLOBAL and T GRAVEL variables. From the D DRAINAGE and D USDA TEX CLASS tables
 select the CODE variable. The resulting query design should have the Fields row populated with the selected variables for
 their respective table on the Table row</p>
-<img alt="_static/documentation/calculate/sqi3.png" class="align-center" src="_static/documentation/calculate/sqi3.png" />
+<img alt="_static/documentation/calculate/sqi3.png" class="align-center" src="_static/documentation/calculate/sqi3.png"/>
 </li>
 <li><p>Click run and the resulting table should have 4 columns populated with data from the
 selected variables</p>
-<img alt="_static/documentation/calculate/sqi4.png" class="align-center" src="_static/documentation/calculate/sqi4.png" />
-<img alt="_static/documentation/calculate/sqi5.png" class="align-center" src="_static/documentation/calculate/sqi5.png" />
+<img alt="_static/documentation/calculate/sqi4.png" class="align-center" src="_static/documentation/calculate/sqi4.png"/>
+<img alt="_static/documentation/calculate/sqi5.png" class="align-center" src="_static/documentation/calculate/sqi5.png"/>
 </li>
 <li><p>Export the table to MS Excel under the ’External Data’ tab as shown below. On the
 dialogue that pops up, give the export table an appropriate name and select ’Excel 97 -
 Excel 2003 Workbook’ as the export file format</p>
-<img alt="_static/documentation/calculate/sqi6.png" class="align-center" src="_static/documentation/calculate/sqi6.png" />
-<img alt="_static/documentation/calculate/sqi7.png" class="align-center" src="_static/documentation/calculate/sqi7.png" />
+<img alt="_static/documentation/calculate/sqi6.png" class="align-center" src="_static/documentation/calculate/sqi6.png"/>
+<img alt="_static/documentation/calculate/sqi7.png" class="align-center" src="_static/documentation/calculate/sqi7.png"/>
 </li>
 <li><p>In MS Excel, open the just exported sheet and in separate sheets copy the MU Global field
 alongside the 3 variables of interest (Drainage, Gravel, Texture class); Paste the variables
 separately as shown below to facilitate joining them to the raster dataset in
 Q-GIS software.</p>
-<img alt="_static/documentation/calculate/sqi8.png" class="align-center" src="_static/documentation/calculate/sqi8.png" />
-<img alt="_static/documentation/calculate/sqi9.png" class="align-center" src="_static/documentation/calculate/sqi9.png" />
+<img alt="_static/documentation/calculate/sqi8.png" class="align-center" src="_static/documentation/calculate/sqi8.png"/>
+<img alt="_static/documentation/calculate/sqi9.png" class="align-center" src="_static/documentation/calculate/sqi9.png"/>
 </li>
 <li><p>For each of the newly created sheets, copy the tables in MS Excel and paste to MS Access</p>
-<img alt="_static/documentation/calculate/sqi10.png" class="align-center" src="_static/documentation/calculate/sqi10.png" />
-<img alt="_static/documentation/calculate/sqi11.png" class="align-center" src="_static/documentation/calculate/sqi11.png" />
+<img alt="_static/documentation/calculate/sqi10.png" class="align-center" src="_static/documentation/calculate/sqi10.png"/>
+<img alt="_static/documentation/calculate/sqi11.png" class="align-center" src="_static/documentation/calculate/sqi11.png"/>
 </li>
 <li><p>Under the Export data tab, select the Export to text file option as shown below.</p>
-<img alt="_static/documentation/calculate/sqi12.png" class="align-center" src="_static/documentation/calculate/sqi12.png" />
+<img alt="_static/documentation/calculate/sqi12.png" class="align-center" src="_static/documentation/calculate/sqi12.png"/>
 </li>
 <li><p>On the Export text wizard that pops us set the export text as delimited text by checking
 the Delimited options then click next.</p>
-<img alt="_static/documentation/calculate/sqi13.png" class="align-center" src="_static/documentation/calculate/sqi13.png" />
+<img alt="_static/documentation/calculate/sqi13.png" class="align-center" src="_static/documentation/calculate/sqi13.png"/>
 </li>
 </ol>
 <p>9. On the Export text wizard that pops us set the export text as delimited text by checking
 the Delimited options fig. 2.15 then click next.</p>
 <blockquote>
-<div><img alt="_static/documentation/calculate/sqi14.png" class="align-center" src="_static/documentation/calculate/sqi14.png" />
+<div><img alt="_static/documentation/calculate/sqi14.png" class="align-center" src="_static/documentation/calculate/sqi14.png"/>
 <p>Click on next to finish the export. Repeat steps 6 to 9 for all the other remaining variables
 and save the text files. The text files are used to assign pixel values to the HWSD.bil raster in Q-GIS.</p>
 </div></blockquote>
@@ -322,35 +419,35 @@ and save the text files. The text files are used to assign pixel values to the H
 <li><p>Open the HWSD.bil raster file on Qgis together with the vector data for the OSS North Africa States in Q-GIS</p></li>
 </ol>
 <blockquote>
-<div><img alt="_static/documentation/calculate/sqi15.png" class="align-center" src="_static/documentation/calculate/sqi15.png" />
+<div><img alt="_static/documentation/calculate/sqi15.png" class="align-center" src="_static/documentation/calculate/sqi15.png"/>
 </div></blockquote>
 <ol class="arabic simple" start="11">
 <li><p>Under the raster tab on the Q-GIS menu bar navigate to ‘Extraction’ &gt; ‘Extract by Mask Layer’</p></li>
 </ol>
 <blockquote>
-<div><img alt="_static/documentation/calculate/sqi16.png" class="align-center" src="_static/documentation/calculate/sqi16.png" />
+<div><img alt="_static/documentation/calculate/sqi16.png" class="align-center" src="_static/documentation/calculate/sqi16.png"/>
 </div></blockquote>
 <ol class="arabic simple" start="12">
 <li><p>In the Clip Raster by Mask Layer dialogue box, select hwsd raster as the input layer and</p></li>
 </ol>
 <blockquote>
 <div><p>the Vector layer as your Mask Layer. Save the output with the desired name to your desired location.</p>
-<img alt="_static/documentation/calculate/sqi17.png" class="align-center" src="_static/documentation/calculate/sqi17.png" />
+<img alt="_static/documentation/calculate/sqi17.png" class="align-center" src="_static/documentation/calculate/sqi17.png"/>
 <p>The clipped raster should is as shown below:</p>
-<img alt="_static/documentation/calculate/sqi18.png" class="align-center" src="_static/documentation/calculate/sqi18.png" />
+<img alt="_static/documentation/calculate/sqi18.png" class="align-center" src="_static/documentation/calculate/sqi18.png"/>
 </div></blockquote>
 <ol class="arabic simple" start="13">
 <li><p>On the Q-GIS Menu bar, click on Processing and select the toolbox (or use keyboard shortcut Ctrl+Alt+T) to</p></li>
 </ol>
 <blockquote>
 <div><p>open the processing toolbox.</p>
-<img alt="_static/documentation/calculate/sqi19.png" class="align-center" src="_static/documentation/calculate/sqi19.png" />
+<img alt="_static/documentation/calculate/sqi19.png" class="align-center" src="_static/documentation/calculate/sqi19.png"/>
 </div></blockquote>
 <ol class="arabic simple" start="14">
 <li><p>On the processing toolbox, search for the GRASS-GIS r.recode tool</p></li>
 </ol>
 <blockquote>
-<div><img alt="_static/documentation/calculate/sqi20.png" class="align-center" src="_static/documentation/calculate/sqi20.png" />
+<div><img alt="_static/documentation/calculate/sqi20.png" class="align-center" src="_static/documentation/calculate/sqi20.png"/>
 </div></blockquote>
 <ol class="arabic simple" start="15">
 <li><p>On the r.recode dialogue, select the clipped HWSD data as the input layer and the .txt</p></li>
@@ -358,39 +455,39 @@ and save the text files. The text files are used to assign pixel values to the H
 <blockquote>
 <div><p>file previously prepared as the file containing the recode rules(for this example we will use the rock fragment).
 Save the output to your desired location and click run.</p>
-<img alt="_static/documentation/calculate/sqi21.png" class="align-center" src="_static/documentation/calculate/sqi21.png" />
+<img alt="_static/documentation/calculate/sqi21.png" class="align-center" src="_static/documentation/calculate/sqi21.png"/>
 <p>Using the HWSD cliped raster as input layer, repeat the step 14 and 15 with the appropriate recoding rules to extract
 the remaining variables and save the outputs for the other datasets.</p>
-<img alt="_static/documentation/calculate/sqi22.png" class="align-center" src="_static/documentation/calculate/sqi22.png" />
+<img alt="_static/documentation/calculate/sqi22.png" class="align-center" src="_static/documentation/calculate/sqi22.png"/>
 </div></blockquote>
 </section>
 <section id="compute-soil-quality-index">
-<h4><a class="toc-backref" href="#id9">Compute Soil Quality Index</a><a class="headerlink" href="#compute-soil-quality-index" title="Permalink to this headline">¶</a></h4>
+<h4 id="compute-soil-quality-index"><a class="toc-backref" href="#id9">Compute Soil Quality Index</a><a class="headerlink" href="#compute-soil-quality-index" title="Permalink to this headline">¶</a></h4>
 <p>First Input soil depth (cm) then Select Custom soil
 quality datasets instead of default and import sqi datasets as below.</p>
-<img alt="_static/documentation/calculate/sqi_custom.png" class="align-center" src="_static/documentation/calculate/sqi_custom.png" />
+<img alt="_static/documentation/calculate/sqi_custom.png" class="align-center" src="_static/documentation/calculate/sqi_custom.png"/>
 <p>Select import and select a raster or vector dataset of interest. Select the band number for the
 raster dataset. Input the aggregation definition, study year and the reclassified output destination file as shown:</p>
-<img alt="_static/documentation/calculate/sqi_load_raster.png" class="align-center" src="_static/documentation/calculate/sqi_load_raster.png" />
+<img alt="_static/documentation/calculate/sqi_load_raster.png" class="align-center" src="_static/documentation/calculate/sqi_load_raster.png"/>
 <p>Ensure to reclassifiy values correctly according to case study. Once all 4 datasets are imported proceed
 to select an area of interest and run the computation. You will be required to select a destination for your
 output file.</p>
-<img alt="_static/documentation/calculate/sqi_aggregation.png" class="align-center" src="_static/documentation/calculate/sqi_aggregation.png" />
+<img alt="_static/documentation/calculate/sqi_aggregation.png" class="align-center" src="_static/documentation/calculate/sqi_aggregation.png"/>
 </section>
 </section>
 </section>
 <section id="vegetation-quality-index-vqi">
-<h2><a class="toc-backref" href="#id10">2. Vegetation Quality Index (VQI)</a><a class="headerlink" href="#vegetation-quality-index-vqi" title="Permalink to this headline">¶</a></h2>
+<h2 id="vegetation-quality-index-vqi"><a class="toc-backref" href="#id10">2. Vegetation Quality Index (VQI)</a><a class="headerlink" href="#vegetation-quality-index-vqi" title="Permalink to this headline">¶</a></h2>
 <p>The Vegetation Quality index is derived as the geometric mean of the characteristics of the vegetation. Fire Hazard layers (RI),
 Fire Resistance (FR), drought (RS), vegetation erosion protection (PE) and cover plant (CV) according to the
 following formula:</p>
 <p><strong>VQI = (RI x PE x RS x CV) ^ ¼</strong></p>
 <p>Default datasets used for vqi are as shown below:</p>
-<table class="docutils align-default">
+<table>
 <colgroup>
-<col style="width: 13%" />
-<col style="width: 13%" />
-<col style="width: 74%" />
+<col style="width: 13%"/>
+<col style="width: 13%"/>
+<col style="width: 74%"/>
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Indicator</strong></p></th>
@@ -421,23 +518,23 @@ following formula:</p>
 - Fire Risk
 - Drought Resistance
 - Erosion Protection</p>
-<img alt="_static/documentation/calculate/vqi_toolbox.png" class="align-center" src="_static/documentation/calculate/vqi_toolbox.png" />
+<img alt="_static/documentation/calculate/vqi_toolbox.png" class="align-center" src="_static/documentation/calculate/vqi_toolbox.png"/>
 <p>Select the land cover year and an aggregation definition or use default set aggregation. This will reclassify
 land cover classes based on definition provided.</p>
-<img alt="_static/documentation/calculate/vqi_agg.png" class="align-center" src="_static/documentation/calculate/vqi_agg.png" />
+<img alt="_static/documentation/calculate/vqi_agg.png" class="align-center" src="_static/documentation/calculate/vqi_agg.png"/>
 <p>For Plant cover, select a start and end date. Proceed to select an area of interest and run the computation.</p>
 </section>
 <section id="climate-quality-index-cqi">
-<h2><a class="toc-backref" href="#id11">3. Climate Quality Index (CQI)</a><a class="headerlink" href="#climate-quality-index-cqi" title="Permalink to this headline">¶</a></h2>
+<h2 id="climate-quality-index-cqi"><a class="toc-backref" href="#id11">3. Climate Quality Index (CQI)</a><a class="headerlink" href="#climate-quality-index-cqi" title="Permalink to this headline">¶</a></h2>
 <p>Climate quality is assessed on the basis of how it influences water availability to the plants. The climate quality index, according to the MEDALUS approach, is obtained by cross-referencing the three layers of
 information namely precipitation and aridity index using the following equation:</p>
 <p><strong>CQI = (precipitation x aridity index) ^ 1/2</strong></p>
 <p>Default datasets used for CQI are:</p>
-<table class="docutils align-default">
+<table>
 <colgroup>
-<col style="width: 13%" />
-<col style="width: 13%" />
-<col style="width: 74%" />
+<col style="width: 13%"/>
+<col style="width: 13%"/>
+<col style="width: 74%"/>
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Indicator</strong></p></th>
@@ -464,30 +561,30 @@ information namely precipitation and aridity index using the following equation:
 </ol>
 </div></blockquote>
 <section id="id1">
-<h3><a class="toc-backref" href="#id12">a. Using default data (Computed on Google Earth Engine)</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h3 id="id1"><a class="toc-backref" href="#id12">a. Using default data (Computed on Google Earth Engine)</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>Select a year of study between 1979-2020. Proceed to select and area of interest and run the computation.</p>
-<img alt="_static/documentation/calculate/cqi_toolbox.png" class="align-center" src="_static/documentation/calculate/cqi_toolbox.png" />
+<img alt="_static/documentation/calculate/cqi_toolbox.png" class="align-center" src="_static/documentation/calculate/cqi_toolbox.png"/>
 </section>
 <section id="id2">
-<h3><a class="toc-backref" href="#id13">b. Using Custom data (Computed locally on device)</a><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<h3 id="id2"><a class="toc-backref" href="#id13">b. Using Custom data (Computed locally on device)</a><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>This step requires the data to be available locally. Load both a potential evapotranspiration and precipitation dataset to the
 plugin as shown below.</p>
-<img alt="_static/documentation/calculate/cqi_toolbox_custom.png" class="align-center" src="_static/documentation/calculate/cqi_toolbox_custom.png" />
+<img alt="_static/documentation/calculate/cqi_toolbox_custom.png" class="align-center" src="_static/documentation/calculate/cqi_toolbox_custom.png"/>
 <p>Proceed to select an area of interest and run the computation. You will be required to select a destination for your
 output file.</p>
 </section>
 </section>
 <section id="management-quality-index-mqi">
-<h2><a class="toc-backref" href="#id14">4. Management Quality Index (MQI)</a><a class="headerlink" href="#management-quality-index-mqi" title="Permalink to this headline">¶</a></h2>
+<h2 id="management-quality-index-mqi"><a class="toc-backref" href="#id14">4. Management Quality Index (MQI)</a><a class="headerlink" href="#management-quality-index-mqi" title="Permalink to this headline">¶</a></h2>
 <p>The Management quality index, according to the MEDALUS approach, is obtained by cross-referencing the two layers of information
 namely Land-Use intensity (LU) and Population Density (PD) using the following equation:</p>
 <p><strong>MQI = (LU X PD)^1/2</strong></p>
 <p>Default datasets used for MQI are:</p>
-<table class="docutils align-default">
+<table>
 <colgroup>
-<col style="width: 13%" />
-<col style="width: 13%" />
-<col style="width: 74%" />
+<col style="width: 13%"/>
+<col style="width: 13%"/>
+<col style="width: 74%"/>
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Indicator</strong></p></th>
@@ -509,142 +606,87 @@ namely Land-Use intensity (LU) and Population Density (PD) using the following e
 <p>To compute vegetation quality index, select Management Quality Index option under the MEDALUS toolbar. Select
 the land cover year an and set aggregation definition for Land Use Intensity. This will reclassify land cover classes
 based on definition provided.</p>
-<img alt="_static/documentation/calculate/mqi_toolbox.png" class="align-center" src="_static/documentation/calculate/mqi_toolbox.png" />
-<img alt="_static/documentation/calculate/mqi_agg.png" class="align-center" src="_static/documentation/calculate/mqi_agg.png" />
+<img alt="_static/documentation/calculate/mqi_toolbox.png" class="align-center" src="_static/documentation/calculate/mqi_toolbox.png"/>
+<img alt="_static/documentation/calculate/mqi_agg.png" class="align-center" src="_static/documentation/calculate/mqi_agg.png"/>
 <p>Proceed to select an area of interest and run the computation. You will be required to select a destination for your
 output file.</p>
 </section>
 <section id="environmentally-sensitive-area-esa-index-combined-desertification-layer">
-<h2><a class="toc-backref" href="#id15">Environmentally sensitive area (ESA) Index (Combined Desertification Layer)</a><a class="headerlink" href="#environmentally-sensitive-area-esa-index-combined-desertification-layer" title="Permalink to this headline">¶</a></h2>
+<h2 id="environmentally-sensitive-area-esa-index-combined-desertification-layer"><a class="toc-backref" href="#id15">Environmentally sensitive area (ESA) Index (Combined Desertification Layer)</a><a class="headerlink" href="#environmentally-sensitive-area-esa-index-combined-desertification-layer" title="Permalink to this headline">¶</a></h2>
 <p>The environmentally sensitive area (ESA) index (ESAI) is computed according to the original procedure as a geometric
 mean of the four quality values recorded at each location (i.e., in each elementary pixel; Equation 2):</p>
 <p><strong>ESAI = (SQI x VQI x CQI x MQI) ^ 1/4</strong></p>
 <p>To compute the final desertification layer all MEDALUS subindicator must be already computed i.e SQI, VQI, CQI, MQI.
 In the MEDALUS toolbox select Calculate <strong>final MEDALUS option</strong> as shown below:</p>
-<img alt="_static/documentation/calculate/esai.png" class="align-center" src="_static/documentation/calculate/esai.png" />
+<img alt="_static/documentation/calculate/esai.png" class="align-center" src="_static/documentation/calculate/esai.png"/>
 <p>Load all 4 layers to the plugin, select the area of interest and compute the ESAI. You will be required to
 select a destination for your output file.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>All layers will be automatically loaded into the plugin if they are available and loaded within QGIS.</p>
 </div>
-<img alt="_static/documentation/calculate/esai_toolbox.png" class="align-center" src="_static/documentation/calculate/esai_toolbox.png" />
+<img alt="_static/documentation/calculate/esai_toolbox.png" class="align-center" src="_static/documentation/calculate/esai_toolbox.png"/>
 <div class="toctree-wrapper compound">
 </div>
 </section>
 </section>
 
 
-                    <!-- Comments -->
-                    
-                </div>
-                <div class="col-md-4 toc">
-                    <h3>Table Of Contents</h3>
-                    <div id="toc">
-                        
-                        <p class="caption" role="heading"><span class="caption-text">About</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/general_information.html">General Infortmation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/data.html">Data sources</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/Layers.html">Dataset coding</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Introduction/faq.html">Frequently asked questions</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Background</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Background/LD_indicators.html">Land Degradation Indicators</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Background/LD_indicators.html#sdg15-3-1-indicator">SDG15.3.1 Indicator</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Background/LD_indicators.html#vegetation-loss-gain-hotspots">Vegetation Loss/Gain hotspots</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Background/LD_indicators.html#forest-change">Forest Change</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Web Service Guide</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Service/Service_Guide.html">Serivice Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Service/Calculate_SDG.html">SDG 15.3.1 indicator</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Service/Calculate_vegetationloss.html">Calculate Vegetation Loss/Gain indicators</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Service/Calculate_Forestloss.html">Calculate Forest Change</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Service/Calculate_Medalus.html">Calculating Sensitivity to Desertification (MEDALUS)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Service/Download_results.html">Exporting Outputs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Service/Download_data.html">Download data</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Qgis Plugin Guide</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="plugin_development.html">Plugin Development</a></li>
-<li class="toctree-l1"><a class="reference internal" href="before_installing.html">Before installing the toolbox</a></li>
-<li class="toctree-l1"><a class="reference internal" href="installing.html">Installing the toolbox</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Registration.html">Registration and settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Calculate_sdg15.html">Calculate SDG 15.3.1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Calculate_vegetation.html">Calculate Vegetation Degradation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Calculate_forest.html">Calculate Forest Degradation</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Calculate Desertification (MEDALUS)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#soil-quality-index-sqi">1. Soil Quality Index (SQI)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#vegetation-quality-index-vqi">2. Vegetation Quality Index (VQI)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#climate-quality-index-cqi">3. Climate Quality Index (CQI)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#management-quality-index-mqi">4. Management Quality Index (MQI)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#environmentally-sensitive-area-esa-index-combined-desertification-layer">Environmentally sensitive area (ESA) Index (Combined Desertification Layer)</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="gee_tasks.html">View and download results</a></li>
-<li class="toctree-l1"><a class="reference internal" href="load_data.html">Load Custom Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Download_data.html">Download raw data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="visualization.html">Visualization tools</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">QGIS Plugin Training Material</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="sdg_15_training.html">Calculate SDG 15.3.1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vegetation_degradation_training.html">Calculate Vegetation/Forest Degradation</a></li>
-</ul>
-
-                        
-                    </div>
-                </div>
+          </article>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer class="md-footer">
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+          
+            <a href="Calculate_forest.html" title="Calculate Forest Degradation"
+               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
+               rel="prev">
+              <div class="md-flex__cell md-flex__cell--shrink">
+                <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+              </div>
+              <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+                <span class="md-flex__ellipsis">
+                  <span
+                      class="md-footer-nav__direction"> Previous </span> Calculate Forest Degradation </span>
+              </div>
+            </a>
+          
+          
+            <a href="gee_tasks.html" title="View and download results"
+               class="md-flex md-footer-nav__link md-footer-nav__link--next"
+               rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
+                class="md-flex__ellipsis"> <span
+                class="md-footer-nav__direction"> Next </span> View and download results </span>
             </div>
-        </article>
-        
-        
-        <footer class="container">
-            <div class="site-footer">
-                <div class="copyright pull-left">
-                    
-                    &#169; Copyright 2021, Derick Ongeri.
-                    
-                </div>
-                <div class="source_code">
-                    
-                    <a href="javascript:window.scrollTo(20,20)">
-                        <i class="fa fa-arrow-up" title="To The Top" aria-hidden="true"></i>
-                    </a>
-                    
-                </div>
-                
-                <div class="sphinx pull-right">
-                    
-                    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.0
-                    
-                </div>
-                
+            <div class="md-flex__cell md-flex__cell--shrink"><i
+                class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
             </div>
-            
-        </footer>
+          
+        </a>
         
-        
-        
-     
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script> 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script> 
-    <script src="../_static/jquery.js"></script> 
-    <script src="../_static/underscore.js"></script> 
-    <script src="../_static/doctools.js"></script> 
-     
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-    <script type="text/javascript" src="../_static/js/script.js"></script>
-    <script type="text/javascript" src="../_static/js/underscore-min.js"></script>
-    <script type="text/javascript" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-
-    
-
-        
-    </body>
+      </nav>
+    </div>
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright">
+          <div class="md-footer-copyright__highlight">
+              &#169; Copyright 2021, Derick Ongeri.
+              
+          </div>
+            Created using
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 4.3.0.
+             and
+            <a href="https://github.com/bashtage/sphinx-material/">Material for
+              Sphinx</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../_static/javascripts/application.js"></script>
+  <script>app.initialize({version: "1.0.4", url: {base: ".."}})</script>
+  </body>
 </html>
